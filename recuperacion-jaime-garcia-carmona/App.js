@@ -2,16 +2,16 @@ import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { Text, View, StyleSheet, Image, Button, TextInput, FlatList, ScrollView} from 'react-native';
-import Ionicons from 'react-native-vector-icons/Ionicons';
-import { MaterialIcons } from "react-native-vector-icons";
 import {HistoriaScreen} from "./funciones/historia";
 import {SettingsScreen} from "./funciones/usuarios";
 import {DetailsScreen} from "./funciones/ResultadosBusqueda";
 
 
 
-const SettingsStack = createNativeStackNavigator();
+
+const SettingsStack = createNativeStackNavigator(
+
+);
 
 function SettingsStackScreen() {
   return (
@@ -25,6 +25,7 @@ function SettingsStackScreen() {
 const Tab = createBottomTabNavigator();
 
 export default function App() {
+
   return (
     <NavigationContainer >
       <Tab.Navigator
@@ -39,9 +40,9 @@ export default function App() {
         }
     }}> 
 
-        <Tab.Screen name="Historia" component={HistoriaScreen} options={{ headerStyle: {backgroundColor: '#58E209'}, headerTitleAlign: 'center', tabBarIcon:(tabInfo) => ( <MaterialIcons name="home" size={25} color={tabInfo.tintColor} /> ),}} />
+        <Tab.Screen name="Historia" component={HistoriaScreen} options={{ headerStyle: {backgroundColor: '#58E209'}, headerTitleAlign: 'center'}} />
 
-        <Tab.Screen name="Musicos" component={SettingsStackScreen} options={{  headerShown: false,tabBarIcon: (tabInfo) => (<MaterialIcons name="archive" size={25} color= {tabInfo.tintColor} /> ),}}/>
+        <Tab.Screen name="Musicos" component={SettingsStackScreen} options={{  headerShown: false}}/>
 
       </Tab.Navigator>
     </NavigationContainer>

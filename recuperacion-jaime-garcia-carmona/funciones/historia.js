@@ -1,19 +1,14 @@
 import * as React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { Text, View, StyleSheet, Image, Button, TextInput, FlatList, ScrollView} from 'react-native';
-import Ionicons from 'react-native-vector-icons/Ionicons';
-import { MaterialIcons } from "react-native-vector-icons";
+import { Text, View, Image, ScrollView} from 'react-native';
 import {styleHistoria} from "../Estilo/estiloHistoria";
 
 export const HistoriaScreen = ({ navigation }) =>{
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <ScrollView>
+      <ScrollView >
         <Text style={styleHistoria.textEncavezados}>bienvenido a la historia de los dispositivos</Text>
         <Text style={styleHistoria.textTitulo}>Nokia</Text>
-        <Image source={require('imagenes/movil1.png')} style={styleHistoria.foto1} />
+        <Image source={require('../imagenes/movil1.png')} style={styleHistoria.foto1} />
         <View style={{flexDirection: 'row'} }>
           <Text style={styleHistoria.textInfo}>Fecha de lanzamiento: </Text><Text style={styleHistoria.textdescripcion}>1999</Text>
         </View>
@@ -24,7 +19,7 @@ export const HistoriaScreen = ({ navigation }) =>{
           <Text style={styleHistoria.textInfo}>Conclusion: </Text><Text style={styleHistoria.textdescripcion}>Fue uno de los dispositivos moviles mas revolucionarios y que mas famoso por su resistencia</Text>
         </View>
          <Text style={styleHistoria.textTitulo}>Iphone 4</Text>
-         <Image source={require('imagenes/movil2.png')} style={styleHistoria.foto2} />
+         <Image source={require('../imagenes/movil2.png')} style={styleHistoria.foto2} />
          <View style={{flexDirection: 'row'} }>
           <Text style={styleHistoria.textInfo}>Fecha de lanzamiento: </Text><Text style={styleHistoria.textdescripcion}>2010</Text>
         </View>
@@ -37,7 +32,7 @@ Como ha especificado Apple, la versión del teléfono en color blanco daba probl
           <Text style={styleHistoria.textInfo}>Conclusion: </Text><Text style={styleHistoria.textdescripcion}>Fue el primer smartphone que gano una seria popularidad y lanzo a la compañia apple</Text>
         </View>
         <Text style={styleHistoria.textTitulo}>Huawey P30 Pro</Text>
-         <Image source={require('imagenes/movil3.png')} style={styleHistoria.foto3} />
+         <Image source={require('../imagenes/movil3.png')} style={styleHistoria.foto3} />
           <View style={{flexDirection: 'row'} }>
           <Text style={styleHistoria.textInfo}>Fecha de lanzamiento: </Text><Text style={styleHistoria.textdescripcion}>2020</Text>
         </View>

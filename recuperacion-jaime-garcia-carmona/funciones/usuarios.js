@@ -1,10 +1,5 @@
 import * as React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { Text, View, StyleSheet, Image, Button, TextInput, FlatList, ScrollView} from 'react-native';
-import Ionicons from 'react-native-vector-icons/Ionicons';
-import { MaterialIcons } from "react-native-vector-icons";
+import { Text, View, Image, Button, TextInput, FlatList, ScrollView} from 'react-native';
 import {musicos} from "../Musicos/DatosMusicos";
 import {styleUsuarios} from "../Estilo/estiloUsuarios";
 
@@ -12,7 +7,7 @@ export const SettingsScreen = ({ navigation, route }) => {
   const [instrumento, instrumentoSeleccionado] = React.useState('');
   const RenderItem = ({ item }) => (
     <View style={{flexDirection: 'row', marginLeft: 10, marginBottom: 10, marginTop: 10}}>
-      <Image source={require('imagenes/user.png')} style={styleUsuarios.imagenUser} />
+      <Image source={require('../imagenes/user.png')} style={styleUsuarios.imagenUser} />
       <View>
         <Text style={styleUsuarios.nombres}> {item.nombre} </Text>
         <Text style={styleUsuarios.instrumentos}> {item.instrumento} </Text>
@@ -24,7 +19,7 @@ export const SettingsScreen = ({ navigation, route }) => {
     <ScrollView style={{ flex: 1 }}>
       <View style={{ paddingTop: 50 }}>
         <Text style={styleUsuarios.tituloPagina}> Busqueda de usuarios </Text>
-        <TextInput keyboardType="alphabetic" onChangeText={(x) => instrumentoSeleccionado(x)} placeholder="Buscar Por Instrumento" style={styleUsuarios.estiloEntradaTexto} />
+        <TextInput onChangeText={(x) => instrumentoSeleccionado(x)} placeholder="Buscar Por Instrumento" style={styleUsuarios.estiloEntradaTexto} />
         <Button title="Buscar" color="#58a203" onPress={() => navigation.navigate('Busqueda', { z: instrumento })} />
         <FlatList data={musicos} renderItem={RenderItem} keyExtractor={(item) => item.id}> marginTop: 25 </FlatList>
       </View>

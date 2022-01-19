@@ -23,11 +23,9 @@ export const styleUsuarios = StyleSheet.create({
      marginRight: 5 
   },
   nombres: {
-     fontFamily: 'Cochin',
      fontSize: 17
   },
   instrumentos: {
-     fontFamily: 'Cochin',
      fontSize: 13,
      color: 'gray'
   },

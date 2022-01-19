@@ -1,33 +1,4 @@
 {
-  "expo": {
-    "name": "recuperacion-jaime-garcia-carmona",
-    "slug": "snack-1b125d84-86bd-4c30-97fb-f94af233db49",
-    "version": "1.0.0",
-    "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
-    },
-    "updates": {
-      "fallbackToCacheTimeout": 0
-    },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
-    "ios": {
-      "supportsTablet": true
-    },
-    "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
-      }
-    },
-    "web": {
-      "favicon": "./assets/favicon.png"
-    },
-    "description": "El examen lo componen 3 pantallas divididas en dos menús:\n\n- Primer menú(Historia): Lo compone una pantalla que dispondrá de:\n\no Una imagen representativa de un dispositivo móvil\n\no Texto representativo de la imagen\n\no Fecha de lanzamiento del dispositivo\n\no Historia del dispositivo\n\no Conclusión: porqué ese dispositivo sigue o no en el mercado\n\n- Segundo menú (Músicos): Lo componen dos pantallas:\n\no Listado de usuarios con un campo para buscar por Instrumento. Los músicos tendrán visible los campos:\n\n§ Nombre del músico\n\n§ Instrumento que toca\n\no Al filtrar te llevará a otra pantalla con los resultados de la búsqueda. Esta nueva pantalla muestra:\n\n§ Nombre del músico\n\n§ Edad\n\n§ Ciudad de nacimiento\n\n§ Instrumento que toca"
-  }
+  "name": "recuperacion",
+  "displayName": "recuperacion"
 }
